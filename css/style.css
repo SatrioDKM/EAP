@@ -171,9 +171,9 @@ nav.scrolled {
 .hl-italic { font-style: italic; color: rgba(255,255,255,0.7); font-size: clamp(28px, 3.5vw, 40px); }
 .hero-center .desc { font-size: 16px; color: rgba(255,255,255,0.75); letter-spacing: 4px; text-transform: uppercase; font-family: 'Inter', sans-serif; font-weight: 300; text-shadow: 0 4px 20px rgba(0,0,0,0.8); margin-top: 15px; }
 
-/* Flipped Plane */
+/* Plane Animation Fix (Removed scaleX so it flies forward) */
 .hero-plane { position: absolute; z-index: 5; bottom: 20%; animation: flyAcross 15s linear infinite; pointer-events: none; }
-.hero-plane svg { width: 160px; filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.5)); transform: scaleX(-1); } /* Fixed animation backward direction */
+.hero-plane svg { width: 160px; filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.5)); }
 @keyframes flyAcross {
   0% { left: -200px; bottom: 15%; transform: rotate(-5deg); opacity: 0; }
   10% { opacity: 1; }
@@ -295,9 +295,10 @@ textarea.form-control { resize: none; min-height: 120px; margin-bottom: 20px; }
 
 @media (max-width: 768px) {
   .section { padding: 80px 0; }
-  .section-title { font-size: clamp(32px, 8vw, 42px); line-height: 1.15; }
-  .hl-bold { font-size: clamp(42px, 10vw, 55px); line-height: 1.1; margin: 5px 0; }
-  .hero-center .desc { font-size: 12px; letter-spacing: 2px; }
+  .section-title { font-size: clamp(28px, 7vw, 42px); line-height: 1.15; }
+  .hl-bold { font-size: clamp(32px, 8vw, 55px); line-height: 1.1; margin: 5px 0; word-break: break-word; }
+  .hl-light { font-size: clamp(24px, 5vw, 50px); }
+  .hero-center .desc { font-size: 12px; letter-spacing: 2px; padding: 0 10px; }
   .nav-links, .nav-cta { display: none; }
   .menu-toggle { display: flex; }
   .services-grid { grid-template-columns: 1fr; gap: 24px; }
@@ -313,7 +314,7 @@ textarea.form-control { resize: none; min-height: 120px; margin-bottom: 20px; }
 @media (max-width: 480px) {
   .section { padding: 60px 0; }
   nav { padding: 20px 5%; }
-  .hero { min-height: 100vh; }
+  .hero { min-height: 100vh; padding-top: 60px; }
   .hero-plane svg { width: 120px; }
   .btn-primary { padding: 14px 24px; font-size: 13px; width: 100%; justify-content: center; }
   .hero-center .btn-primary { width: auto; }
