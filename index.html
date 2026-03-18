@@ -15,21 +15,20 @@
   <meta property="og:description" content="Your trusted, professional, and cost-efficient aviation partner in Indonesia.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.eelaviapratama.com">
-  <!-- Place your logo URL here for social sharing -->
   <meta property="og:image" content="https://sub.eelaviapratama.com/img/logo.jpeg">
 
   <!-- Favicon -->
   <link rel="icon" href="https://sub.eelaviapratama.com/img/logo.jpeg" type="image/jpeg">
 
-  <!-- Fonts: Playfair Display for Headings, Inter for Body -->
+  <!-- Fonts: Outfit for Headings, Plus Jakarta Sans for Body -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- Custom Icy Blue CSS -->
+  <!-- Custom Anti-Gravity CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -75,7 +74,6 @@
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-plane">
-      <!-- Fixed the backwards plane scaleX via CSS now -->
       <svg viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M20 40 L160 15 L180 40 L160 50 Z" fill="white" opacity="0.95"/>
         <path d="M80 40 L130 20 L140 40 Z" fill="#0284c7"/>
@@ -87,15 +85,16 @@
       </svg>
     </div>
 
+    <!-- Anti-Gravity Staggered Text -->
     <div class="container relative z-10" style="width: 100%; display: flex; justify-content: center;">
-      <div class="hero-center reveal delay-1">
+      <div class="hero-center">
         <h1 class="hero-headline">
-          <span class="hl-light">Your Trusted</span><br>
-          <span class="hl-bold">Aviation Partner</span><br>
-          <span class="hl-light hl-italic">In Indonesia</span>
+          <span class="hl-light"><span class="text-inner">Your Trusted</span></span>
+          <span class="hl-bold"><span class="text-inner">Aviation Partner</span></span>
+          <span class="hl-light hl-italic"><span class="text-inner">In Indonesia</span></span>
         </h1>
         <p class="desc">Professional â€” Innovative â€” Cost-Efficient â€” Reliable</p>
-        <div style="display:flex; justify-content:center; margin-top:40px;">
+        <div class="hero-btns" style="display:flex; justify-content:center; margin-top:40px;">
           <a href="#services" class="btn-primary">Explore Services <i class="fa-solid fa-arrow-down"></i></a>
         </div>
       </div>
@@ -107,9 +106,7 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-images reveal">
-          <!-- Replaced Unsplash with Local Image -->
           <img src="images/about.png" alt="Hangar Operations" class="about-img-main">
-          <!-- Second local image for the overlapping effect -->
           <img src="images/charter.png" alt="Luxury Cabin" class="about-img-sub">
         </div>
         <div class="about-content reveal delay-1">
@@ -118,12 +115,12 @@
           <p class="desc">Eel Avia Pratama is a dynamic company in Indonesia's aviation sector, managed by a team of seasoned aviation professionals. We are here to provide service and satisfaction to our partners in the aerospace sector, competing confidently in the free market with professionalism and innovation.</p>
           
           <div style="margin-bottom: 25px;">
-            <h4 style="font-family: 'Inter', sans-serif; font-size:16px; color:var(--light-blue); margin-bottom:8px;">Our Vision</h4>
-            <p style="font-size:14px; color:var(--text-muted);">To be the Principal of Technical & Operations Partner in our segment and deliver cost-efficient technical solutions to the Airline Industry.</p>
+            <h4 style="font-family: 'Outfit', sans-serif; font-size:16px; color:var(--light-blue); margin-bottom:8px;">Our Vision</h4>
+            <p style="font-size:15px; color:var(--text-muted);">To be the Principal of Technical & Operations Partner in our segment and deliver cost-efficient technical solutions to the Airline Industry.</p>
           </div>
           <div>
-            <h4 style="font-family: 'Inter', sans-serif; font-size:16px; color:var(--light-blue); margin-bottom:8px;">Our Mission</h4>
-            <p style="font-size:14px; color:var(--text-muted);">Utilizing smart, innovative, cost-efficient and excellent approaches to deliver the best aviation services that exceed our partners' expectations.</p>
+            <h4 style="font-family: 'Outfit', sans-serif; font-size:16px; color:var(--light-blue); margin-bottom:8px;">Our Mission</h4>
+            <p style="font-size:15px; color:var(--text-muted);">Utilizing smart, innovative, cost-efficient and excellent approaches to deliver the best aviation services that exceed our partners' expectations.</p>
           </div>
 
           <div class="about-stats">
@@ -141,17 +138,16 @@
     </div>
   </section>
 
-  <!-- SERVICES (Cards Grid Layout) -->
+  <!-- SERVICES (Glassmorphism Levitation Cards) -->
   <section class="services section" id="services">
     <div class="container">
-      <div style="text-align: center; margin-bottom: 60px;" class="reveal">
+      <div style="text-align: center; margin-bottom: 30px;" class="reveal">
         <div class="section-tag" style="justify-content: center;">What We Offer</div>
         <h2 class="section-title">Our <span class="highlight">Services</span></h2>
         <p class="desc" style="max-width: 600px; margin: 0 auto;">Three pillars of excellence in aviation support</p>
       </div>
 
       <div class="services-grid">
-        <!-- Service 1 -->
         <div class="srv-card reveal">
           <div class="srv-icon"><i class="fa-solid fa-briefcase"></i></div>
           <h3>Aviation Consulting</h3>
@@ -162,7 +158,6 @@
             <li><i class="fa-solid fa-check"></i> <span>Aircraft Delivery & Redelivery Management</span></li>
           </ul>
         </div>
-        <!-- Service 2 -->
         <div class="srv-card reveal delay-1">
           <div class="srv-icon"><i class="fa-solid fa-plane-circle-check"></i></div>
           <h3>Aircraft Services</h3>
@@ -173,7 +168,6 @@
             <li><i class="fa-solid fa-check"></i> <span>Technical Support & Troubleshooting</span></li>
           </ul>
         </div>
-        <!-- Service 3 -->
         <div class="srv-card reveal delay-2">
           <div class="srv-icon"><i class="fa-solid fa-user-graduate"></i></div>
           <h3>Training Center</h3>
@@ -208,7 +202,7 @@
   <!-- TEAM / ORG CHART -->
   <section class="team section" id="team">
     <div class="container">
-      <div style="text-align: center; margin-bottom: 60px;" class="reveal">
+      <div style="text-align: center; margin-bottom: 30px;" class="reveal">
         <div class="section-tag" style="justify-content: center;">Leadership</div>
         <h2 class="section-title">Our <span class="highlight">Team</span></h2>
       </div>
@@ -218,26 +212,39 @@
           <div class="founder-avatar">EN</div>
           <h3>Ellin Novilinda</h3>
           <span>Founder & CEO</span>
-          <p style="margin-top:20px; font-size:14px; color:var(--text-muted); line-height:1.7;">A licensed Flight Attendant and certified instructor with extensive experience as a consultant in aircraft purchasing, building AOC 121/135, and AMTO 147 organizations. The visionary founder and Director/CEO of PT Eel Avia Pratama.</p>
+          <p style="margin-top:24px; font-size:15px; color:var(--text-muted); line-height:1.7;">A licensed Flight Attendant and certified instructor with extensive experience as a consultant in aircraft purchasing, building AOC 121/135, and AMTO 147 organizations. The visionary founder and Director/CEO of PT Eel Avia Pratama.</p>
         </div>
 
         <div class="org-chart-box reveal delay-1">
-          <h4 style="font-size: 20px; margin-bottom: 30px; font-family:'Inter',sans-serif;">Organisation Structure</h4>
+          <h4 style="font-size: 22px; margin-bottom: 20px; font-family:'Outfit',sans-serif; text-align:center;">Organisation Structure</h4>
           
-          <div class="org-row">
-            <div class="org-node"><h5>Gunawan</h5><p>Manager</p></div>
-          </div>
-          
-          <div class="org-row">
-            <div class="org-node"><h5>Adi Santoso</h5><p>Head of Operational</p></div>
-            <div class="org-node"><h5>Ifani Azalia</h5><p>Admin & Finance</p></div>
-            <div class="org-node"><h5>Anastasya S.N</h5><p>Administration</p></div>
-          </div>
-
-          <div class="org-row">
-            <div class="org-node" style="width: 100%;">
-              <h5>Operational Team</h5>
-              <p style="text-transform: none;">Jan Dennis T &bull; M. Taufiq H &bull; Medy Meyfriyanto &bull; Nico Priyanto</p>
+          <div class="modern-org-chart">
+            <div class="org-node head-node">
+               <h5>Gunawan</h5><p>Manager</p>
+            </div>
+            <div class="org-line-vertical"></div>
+            
+            <div class="org-level-branches">
+              <div class="org-branch">
+                 <div class="org-node"><h5>Adi Santoso</h5><p>Head of Operational</p></div>
+                 <div class="org-line-vertical" style="height: 24px; position:relative; z-index:0;"></div>
+                 <div class="org-node team-node" style="margin-top:0; padding:20px 30px; text-align:left;">
+                   <h5 style="text-align:center;">Operational Team</h5>
+                   <ul style="list-style:none; padding:0; margin-top:15px; display:flex; flex-direction:column; gap:10px;">
+                     <li style="white-space:nowrap;"><i class="fa-solid fa-user-tie" style="color:var(--primary-blue); width:20px;"></i> <span style="font-size:14px; font-family:'Plus Jakarta Sans',sans-serif; color:rgba(255,255,255,0.85); font-weight:500;">Jan Dennis T</span></li>
+                     <li style="white-space:nowrap;"><i class="fa-solid fa-user-tie" style="color:var(--primary-blue); width:20px;"></i> <span style="font-size:14px; font-family:'Plus Jakarta Sans',sans-serif; color:rgba(255,255,255,0.85); font-weight:500;">M. Taufiq H</span></li>
+                     <li style="white-space:nowrap;"><i class="fa-solid fa-user-tie" style="color:var(--primary-blue); width:20px;"></i> <span style="font-size:14px; font-family:'Plus Jakarta Sans',sans-serif; color:rgba(255,255,255,0.85); font-weight:500;">Medy Meyfriyanto</span></li>
+                     <li style="white-space:nowrap;"><i class="fa-solid fa-user-tie" style="color:var(--primary-blue); width:20px;"></i> <span style="font-size:14px; font-family:'Plus Jakarta Sans',sans-serif; color:rgba(255,255,255,0.85); font-weight:500;">Nico Priyanto</span></li>
+                     <li style="white-space:nowrap;"><i class="fa-solid fa-user-tie" style="color:var(--primary-blue); width:20px;"></i> <span style="font-size:14px; font-family:'Plus Jakarta Sans',sans-serif; color:rgba(255,255,255,0.85); font-weight:500;">Fahreza R. Irawan</span></li>
+                   </ul>
+                 </div>
+              </div>
+              <div class="org-branch">
+                 <div class="org-node"><h5>Ifani Azalia</h5><p>Admin & Finance</p></div>
+              </div>
+              <div class="org-branch">
+                 <div class="org-node"><h5>Anastasya S.N</h5><p>Administration</p></div>
+              </div>
             </div>
           </div>
         </div>
@@ -245,7 +252,7 @@
     </div>
   </section>
 
-  <!-- CLIENTS TICKER -->
+  <!-- CLIENTS TICKER (Interactive SVG Marquee) -->
   <section class="clients section" id="clients" style="background:var(--bg-deep); padding-bottom:0;">
     <div class="container text-center reveal">
       <div class="section-tag" style="justify-content: center;">Trusted By</div>
@@ -254,22 +261,51 @@
     
     <div class="clients-ticker-wrap">
       <div class="clients-ticker">
-        <!-- Replaced Boxy Logos with elegant text for lux feel -->
-        <span class="client-name">Kementerian Pertahanan RI</span> &bull; 
-        <span class="client-name">Raffles Global Angkasa</span> &bull; 
-        <span class="client-name">Asia Cargo Airlines</span> &bull; 
-        <span class="client-name">Polisi Udara</span> &bull; 
-        <span class="client-name">Pura Aviation</span> &bull; 
-        <span class="client-name">World Cargo Airlines</span> &bull; 
-        <span class="client-name">Express Cargo Airlines</span> &bull; 
-        <span class="client-name">PT. Atamora Tehnik Makmur</span> &bull; 
-        <span class="client-name">JAS AERO Engineering</span> &bull; 
-        <!-- Duplicated for seamless loop -->
-        <span class="client-name">Kementerian Pertahanan RI</span> &bull; 
-        <span class="client-name">Raffles Global Angkasa</span> &bull; 
-        <span class="client-name">Asia Cargo Airlines</span> &bull; 
-        <span class="client-name">Polisi Udara</span> &bull; 
-        <span class="client-name">Pura Aviation</span> &bull; 
+        <!-- Using FA standard icons as placeholder logos to construct the visual marquee requirement -->
+        <div class="client-logo-box">
+          <i class="fa-solid fa-shield-halved"></i> <span>Kemhan RI</span>
+        </div>
+        <div class="client-logo-box">
+          <i class="fa-solid fa-plane-up" style="color:var(--primary-blue);"></i> <span>Raffles Angkasa</span>
+        </div>
+        <div class="client-logo-box">
+          <i class="fa-solid fa-box-open" style="color:#d4af37;"></i> <span>Asia Cargo Airlines</span>
+        </div>
+        <div class="client-logo-box">
+          <i class="fa-solid fa-helicopter" style="color:#e05555;"></i> <span>Polisi Udara</span>
+        </div>
+        <div class="client-logo-box">
+          <i class="fa-solid fa-plane" style="color:#0ea5e9;"></i> <span>Pura Aviation</span>
+        </div>
+        <div class="client-logo-box">
+          <i class="fa-solid fa-globe" style="color:#25d366;"></i> <span>World Cargo Airlines</span>
+        </div>
+        <div class="client-logo-box">
+          <i class="fa-solid fa-truck-fast" style="color:red;"></i> <span>Express Cargo</span>
+        </div>
+        <div class="client-logo-box">
+          <i class="fa-solid fa-industry" style="color:orange;"></i> <span>PT Atamora</span>
+        </div>
+        <div class="client-logo-box">
+          <i class="fa-solid fa-wrench" style="color:grey;"></i> <span>JAS AERO Engineering</span>
+        </div>
+        
+        <!-- Duplicated to ensure perfectly seamless loop -->
+        <div class="client-logo-box">
+          <i class="fa-solid fa-shield-halved"></i> <span>Kemhan RI</span>
+        </div>
+        <div class="client-logo-box">
+          <i class="fa-solid fa-plane-up" style="color:var(--primary-blue);"></i> <span>Raffles Angkasa</span>
+        </div>
+        <div class="client-logo-box">
+          <i class="fa-solid fa-box-open" style="color:#d4af37;"></i> <span>Asia Cargo Airlines</span>
+        </div>
+        <div class="client-logo-box">
+          <i class="fa-solid fa-helicopter" style="color:#e05555;"></i> <span>Polisi Udara</span>
+        </div>
+        <div class="client-logo-box">
+          <i class="fa-solid fa-plane" style="color:#0ea5e9;"></i> <span>Pura Aviation</span>
+        </div>
       </div>
     </div>
   </section>
@@ -297,7 +333,6 @@
             <p>admin@eelaviapratama.com</p>
           </div>
 
-          <!-- MAP MOVED HERE: Below the contact information -->
           <div class="map-container">
             <iframe src="https://maps.google.com/maps?q=Komplek+Mardi+Grass+Ruko+Eternity+2+Blok+KG+1+No.10+Citra+Raya+Kab.+Tangerang+Banten+15710&output=embed&z=17" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi PT Eel Avia Pratama"></iframe>
           </div>
@@ -305,8 +340,8 @@
 
         <!-- Right: PHP Contact Form -->
         <div class="contact-form-side">
-          <h3 style="font-family:'Playfair Display',serif; font-size:28px; margin-bottom:10px;">Send Us a Message</h3>
-          <p class="desc" style="font-size:14px;">We'll get back to you within 24 hours.</p>
+          <h3 style="font-family:'Outfit',serif; font-size:32px; margin-bottom:10px;">Send Us a Message</h3>
+          <p class="desc" style="font-size:15px;">We'll get back to you within 24 hours.</p>
 
           <form id="contactForm">
             <div class="form-row">
@@ -329,7 +364,7 @@
               <textarea id="message" name="message" class="form-control" placeholder="Tell us about your needs..." required></textarea>
             </div>
             <button type="submit" class="btn-primary w-100" id="submitBtn">Send Direct Message <i class="fa-solid fa-paper-plane"></i></button>
-            <p id="formResponse" style="margin-top:15px; font-size:14px; display:none;"></p>
+            <p id="formResponse" style="margin-top:15px; font-size:15px; display:none; font-weight:600;"></p>
           </form>
         </div>
       </div>
@@ -342,7 +377,7 @@
       <div>
         <div class="footer-logo"><i class="fa-solid fa-plane-departure"></i> PT EEL AVIA PRATAMA</div>
         <p class="footer-desc">Best Business Partner. Providing professional, innovative, and cost-efficient aviation solutions worldwide.</p>
-        <p style="font-size:12px; font-family:monospace; color:var(--text-muted); margin-top:20px;">NIB: 2802230082162</p>
+        <p style="font-size:14px; font-family:monospace; color:var(--text-muted); margin-top:20px; font-weight:600;">NIB: 2802230082162</p>
       </div>
       <div>
         <h4>Company Services</h4>
@@ -358,7 +393,7 @@
         <ul>
           <li><a href="tel:+6281380882980">+62-813-8088-2980</a></li>
           <li><a href="mailto:admin@eelaviapratama.com">admin@eelaviapratama.com</a></li>
-          <li style="margin-top: 10px; display:flex; gap:15px; font-size:18px;">
+          <li style="margin-top: 15px; display:flex; gap:15px; font-size:22px;">
             <a href="#"><i class="fa-brands fa-linkedin"></i></a>
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -367,7 +402,7 @@
       </div>
     </div>
     <div style="border-top:1px solid rgba(255,255,255,0.05); text-align:center; padding: 25px 0;">
-      <p style="font-size:13px; color:var(--text-muted);">&copy; 2026 PT Eel Avia Pratama. All rights reserved.</p>
+      <p style="font-size:14px; color:var(--text-muted); font-weight:500;">&copy; 2026 PT Eel Avia Pratama. All rights reserved.</p>
     </div>
   </footer>
 
