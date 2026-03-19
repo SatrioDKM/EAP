@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealElements = document.querySelectorAll('.reveal');
 
     const revealOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
+        threshold: 0.1,
+        rootMargin: "0px 0px -20px 0px"
     };
 
     const revealObserver = new IntersectionObserver(function(entries, observer) {
@@ -91,6 +91,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const heroReveals = document.querySelectorAll('.hero .reveal');
         heroReveals.forEach(el => el.classList.add('visible'));
     }, 500);
+
+    // ==========================================
+    // Hero Parallax Effect
+    // ==========================================
+    const heroCenter = document.querySelector('.hero-center');
+    window.addEventListener('scroll', () => {
+        if (heroCenter && window.scrollY < window.innerHeight) {
+            const scrolled = window.scrollY;
+            heroCenter.style.transform = `translateY(${scrolled * 0.3}px)`;
+            heroCenter.style.opacity = 1 - (scrolled * 0.0025);
+        }
+    }, { passive: true });
 
     // ==========================================
     // Active Menu Link Highlighting
