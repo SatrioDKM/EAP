@@ -136,7 +136,7 @@ nav.scrolled {
 .section { padding: 150px 0; position: relative; }
 .container { max-width: 1280px; margin: 0 auto; padding: 0 5%; }
 .section-tag {
-  display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 4px;
+  display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 8px;
   text-transform: uppercase; color: var(--light-blue); margin-bottom: 24px;
   display: flex; align-items: center; gap: 12px; font-family: 'Plus Jakarta Sans', sans-serif;
 }
@@ -223,8 +223,10 @@ nav.scrolled {
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 80px; }
 .srv-card {
   background: rgba(10, 17, 28, 0.4);
-  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,0.03);
+  border-top: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.05);
   border-radius: 16px;
   padding: 50px 40px;
   transition: all 0.6s var(--ease);
@@ -266,8 +268,8 @@ nav.scrolled {
 /* ===== TEAM ===== */
 .team { background: var(--bg-card); }
 .team-layout { display: grid; grid-template-columns: 1.2fr 2fr; gap: 80px; align-items: center; }
-.founder-box { background: var(--bg-surface); padding: 50px; border: 1px solid var(--border-light); border-radius: 16px; text-align: center; transition: all 0.5s; }
-.founder-box:hover { box-shadow: var(--shadow-glow); transform: translateY(-10px); border-color: rgba(56, 189, 248, 0.3); }
+.founder-box { background: rgba(10, 17, 28, 0.4); backdrop-filter: blur(30px); border: 1px solid rgba(255,255,255,0.03); border-top: 1px solid rgba(255,255,255,0.15); padding: 50px; border-radius: 16px; text-align: center; transition: all 0.5s; box-shadow: 0 40px 80px rgba(0,0,0,0.8); }
+.founder-box:hover { box-shadow: 0 40px 80px rgba(2, 132, 199, 0.25); transform: translateY(-10px); border-color: rgba(56, 189, 248, 0.3); }
 .founder-avatar { width: 140px; height: 140px; border-radius: 50%; background: linear-gradient(135deg, var(--light-blue), var(--primary-blue)); color: var(--white); font-size: 48px; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 10px 30px rgba(2, 132, 199, 0.4); }
 .founder-box h3 { font-size: 28px; margin-bottom: 8px; }
 .founder-box span { color: var(--light-blue); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; }
@@ -294,6 +296,12 @@ nav.scrolled {
 
 .org-node { background: rgba(10, 17, 28, 0.4); backdrop-filter: blur(16px); padding: 20px 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s var(--ease); position: relative; z-index: 2; width: 100%; max-width: 200px; text-align: center; margin-top: 24px; }
 .org-node:hover { transform: translateY(-6px) scale(1.02); border-color: rgba(56, 189, 248, 0.4); box-shadow: var(--shadow-glow); background: rgba(2, 132, 199, 0.1); }
+.custom-input::placeholder { color: rgba(255,255,255,0.4); }
+.custom-input:focus { border-color: rgba(56, 189, 248, 0.4); box-shadow: 0 0 20px rgba(56, 189, 248, 0.1); background: rgba(255,255,255,0.05); }
+
+/* Fix dropdown options text getting lost in OS white themes */
+select.custom-input { color-scheme: dark; }
+.custom-input option { background-color: #0b1523; color: #ffffff; font-weight: 500; }
 .head-node { border-color: rgba(56, 189, 248, 0.2); background: rgba(2, 132, 199, 0.05); margin-top: 0; max-width: 250px; text-align: center; margin-bottom: 0; }
 .team-node { max-width: 100%; margin-top: 24px;}
 
@@ -319,7 +327,7 @@ nav.scrolled {
 .client-logo-box:hover { filter: grayscale(0) brightness(1) opacity(1); transform: scale(1.1) translateY(-6px); background: rgba(2, 132, 199, 0.1); box-shadow: var(--shadow-glow); }
 
 /* ===== CONTACT & MAP (Integrated) ===== */
-.contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-soft); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; background: rgba(10, 17, 28, 0.4); backdrop-filter: blur(30px); border: 1px solid rgba(255,255,255,0.03); border-top: 1px solid rgba(255,255,255,0.15); border-radius: 16px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.8); }
 .contact-info { padding: 80px 60px; background: rgba(2, 132, 199, 0.05); }
 .ci-item { margin-bottom: 40px; }
 .ci-item h4 { font-size: 13px; text-transform: uppercase; letter-spacing: 3px; color: var(--light-blue); margin-bottom: 12px; font-weight: 700; }
@@ -443,4 +451,18 @@ textarea.form-control { resize: none; min-height: 140px; margin-bottom: 24px; }
   .loader-bar { width: 200px; }
   
   .wa-float { width: 50px; height: 50px; font-size: 26px; bottom: 20px; right: 20px; }
+}
+
+/* ===== AMBIENT ORBS ===== */
+.ambient-orb {
+  position: absolute; border-radius: 50%; z-index: -1; pointer-events: none; opacity: 0.6;
+  animation: floatOrb 25s ease-in-out infinite alternate; will-change: transform;
+}
+.orb-1 { width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(2, 132, 199, 0.25) 0%, transparent 60%); top: -30%; left: -20%; }
+.orb-2 { width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 60%); bottom: -20%; right: -15%; animation-delay: -5s; }
+.orb-3 { width: 70vw; height: 70vw; background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, transparent 60%); top: 20%; left: 10%; animation-delay: -10s; }
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(10vw, 5vw) scale(1.1); }
+  100% { transform: translate(-5vw, 10vw) scale(0.9); }
 }

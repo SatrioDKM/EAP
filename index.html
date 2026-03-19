@@ -85,6 +85,12 @@
   <section class="hero" id="hero">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
+    
+    <!-- AMBIENT ORBS -->
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+    <!-- 
     <div class="hero-plane">
       <svg viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M20 40 L160 15 L180 40 L160 50 Z" fill="white" opacity="0.95" />
@@ -96,6 +102,8 @@
         <path d="M20 40 L0 42" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-dasharray="3 3" />
       </svg>
     </div>
+    -->
+
 
     <!-- Anti-Gravity Staggered Text -->
     <div class="container relative z-10" style="width: 100%; display: flex; justify-content: center;">
@@ -430,12 +438,12 @@
               <div class="form-group"><input type="email" id="email" name="email" class="form-control"
                   placeholder="Email Address" required></div>
               <div class="form-group">
-                <select id="service" name="service" class="form-control" required style="color: rgba(255,255,255,0.7);">
-                  <option value="" disabled selected>Service Interest...</option>
-                  <option value="Consulting">Aviation Consulting</option>
-                  <option value="Aircraft Services">Aircraft Services</option>
-                  <option value="Training">Training Center</option>
-                  <option value="Other">Other Inquiry</option>
+                <select id="service" name="service" class="form-control" required style="color-scheme: dark;">
+                  <option value="" disabled selected style="background-color: #ffffff; color: #000000;">Service Interest...</option>
+                  <option value="Consulting" style="background-color: #ffffff; color: #000000;">Aviation Consulting</option>
+                  <option value="Aircraft Services" style="background-color: #ffffff; color: #000000;">Aircraft Services</option>
+                  <option value="Training" style="background-color: #ffffff; color: #000000;">Training Center</option>
+                  <option value="Other" style="background-color: #ffffff; color: #000000;">Other Inquiry</option>
                 </select>
               </div>
             </div>
@@ -443,8 +451,7 @@
               <textarea id="message" name="message" class="form-control" placeholder="Tell us about your needs..."
                 required></textarea>
             </div>
-            <button type="submit" class="btn-primary w-100" id="submitBtn">Send Direct Message <i
-                class="fa-solid fa-paper-plane"></i></button>
+            <button type="submit" form="contactForm" class="btn-primary w-100" id="submitBtn" style="margin-top: 20px;">SEND VIA EMAIL <i class="fa-solid fa-envelope"></i></button>
             <p id="formResponse" style="margin-top:15px; font-size:15px; display:none; font-weight:600;"></p>
           </form>
         </div>
@@ -457,7 +464,7 @@
     <div class="container footer-grid">
       <div>
         <div class="footer-logo">
-          <img src="images/logo/logo EAP 2.png" alt="EAP Logo" style="height: 50px; width: auto;">
+          <img src="images/logo/logo EAP 2.png" alt="EAP Logo" style="height: 100px; width: auto;">
         </div>
         <p class="footer-desc">Best Business Partner. Providing professional, innovative, and cost-efficient aviation
           solutions worldwide.</p>

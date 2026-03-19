@@ -86,95 +86,77 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealElements.forEach(el => revealObserver.observe(el));
 
-    // Force hero items in view
+    // ==========================================
+    // Hero Parallax Effect (Optimized via rAF)
+    // ==========================================
+    const heroCenter = document.querySelector('.hero-center');
+    let isScrolling = false;
+    
+    window.addEventListener('scroll', () => {
+        if (!isScrolling) {
+            window.requestAnimationFrame(() => {
+                if (heroCenter && window.scrollY < window.innerHeight) {
+                    const scrolled = window.scrollY;
+                    heroCenter.style.transform = `translateY(${scrolled * 0.3}px)`;
+                    heroCenter.style.opacity = 1 - (scrolled * 0.0025);
+                }
+                isScrolling = false;
+            });
+            isScrolling = true;
+        }
+    }, { passive: true });
+    
+    // Force hero items in view on load
     setTimeout(() => {
         const heroReveals = document.querySelectorAll('.hero .reveal');
         heroReveals.forEach(el => el.classList.add('visible'));
-    }, 500);
-
-    // ==========================================
-    // Hero Parallax Effect
-    // ==========================================
-    const heroCenter = document.querySelector('.hero-center');
-    window.addEventListener('scroll', () => {
-        if (heroCenter && window.scrollY < window.innerHeight) {
-            const scrolled = window.scrollY;
-            heroCenter.style.transform = `translateY(${scrolled * 0.3}px)`;
-            heroCenter.style.opacity = 1 - (scrolled * 0.0025);
-        }
-    }, { passive: true });
-
-    // ==========================================
+    }, 200);
     // Active Menu Link Highlighting
     // ==========================================
     const sections = document.querySelectorAll('section[id]');
     const deskNavLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
 
     // ==========================================
-    // Contact Form Submission (AJAX to contact.php)
+    // Contact Form Submission (Mailto Redirection)
     // ==========================================
     const contactForm = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
-    const formResponse = document.getElementById('formResponse');
 
     if (contactForm) {
-        contactForm.addEventListener('submit', async (e) => {
+        contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
-            submitBtn.style.opacity = '0.7';
-            submitBtn.style.pointerEvents = 'none';
-            formResponse.style.display = 'none';
             
             const formData = new FormData(contactForm);
             const dataObj = Object.fromEntries(formData);
             
-            try {
-                const response = await fetch('contact.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify(dataObj)
-                });
-                
-                const result = await response.json();
-                
-                formResponse.style.display = 'block';
-                formResponse.innerText = result.message;
-                formResponse.style.color = result.status === 'success' ? '#38bdf8' : '#e05555';
-                
-                if (result.status === 'success') {
-                    contactForm.reset();
-                    submitBtn.innerHTML = 'Sent Successfully! <i class="fa-solid fa-check"></i>';
-                    submitBtn.style.background = '#0ea5e9';
-                    
-                    setTimeout(() => {
-                        submitBtn.innerHTML = originalText;
-                        submitBtn.style.background = '';
-                        submitBtn.style.opacity = '1';
-                        submitBtn.style.pointerEvents = 'auto';
-                        formResponse.style.display = 'none';
-                    }, 4000);
-                } else {
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.style.opacity = '1';
-                    submitBtn.style.pointerEvents = 'auto';
-                }
-                
-            } catch (error) {
-                console.error("Form submission error:", error);
-                formResponse.style.display = 'block';
-                formResponse.innerText = "Network error. Please try again later or contact us via WhatsApp.";
-                formResponse.style.color = '#e05555';
-                
+            const subject = encodeURIComponent(`EAP Website Inquiry: ${dataObj.service || 'General'} - ${dataObj.name}`);
+            let bodyText = `Name: ${dataObj.name}\n`;
+            if (dataObj.company) bodyText += `Company: ${dataObj.company}\n`;
+            bodyText += `Email: ${dataObj.email}\n`;
+            if (dataObj.phone) bodyText += `Phone: ${dataObj.phone}\n`;
+            if (dataObj.service) bodyText += `Service Interest: ${dataObj.service}\n`;
+            bodyText += `\nMessage:\n${dataObj.message}\n`;
+            
+            const body = encodeURIComponent(bodyText);
+            
+            // Open user's default email client
+            window.location.href = `mailto:info@eelaviapratama.com?subject=${subject}&body=${body}`;
+            
+            // Provide UI feedback
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Opening Email Client... <i class="fa-solid fa-envelope-open-text"></i>';
+            submitBtn.style.opacity = '0.7';
+            
+            setTimeout(() => {
                 submitBtn.innerHTML = originalText;
                 submitBtn.style.opacity = '1';
-                submitBtn.style.pointerEvents = 'auto';
-            }
+                contactForm.reset();
+            }, 3500);
         });
     }
+
+    // (Custom cursor removed per user request for ultimate performance & native feel)
+
+    // (Magnetic buttons removed per user request)
 
 });
